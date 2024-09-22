@@ -1,0 +1,158 @@
+/* General Styling */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: "Arial", sans-serif;
+  background: linear-gradient(
+    135deg,
+    #87ceeb 0%,
+    #b0e0e6 100%
+  ); /* Skyblue gradient */
+  margin: 0;
+  padding: 0;
+}
+
+/* Calculator Container */
+.calculator {
+  width: 90%;
+  max-width: 500px;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+  background-color: white;
+  background: linear-gradient(135deg, #fbc2eb 0%, #a6c1ee 100%);
+  border: 1px solid #ccc;
+}
+
+/* Display Screen */
+#display {
+  width: 100%;
+  height: 100px;
+  text-align: right;
+  padding: 20px;
+  font-size: 2rem;
+  border: none;
+  background-color: #333;
+  color: #fff;
+  border-radius: 15px 15px 0 0;
+  box-sizing: border-box;
+  box-shadow: inset 0px -5px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Buttons Layout */
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Buttons Style */
+button {
+  background-color: #4caf50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: all 0.3s ease; /* Smooth transition */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+button:hover {
+  background-color: #45a049; /* Darker green */
+  transform: scale(1.1); /* Slight zoom effect */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
+}
+
+button:active {
+  transform: scale(0.98); /* Slight shrink effect on click */
+}
+
+/* Number Buttons */
+.number-btn {
+  background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+  color: white;
+}
+
+.number-btn:hover {
+  background: linear-gradient(135deg, #fda085 0%, #f6d365 100%);
+}
+
+/* Operator Buttons */
+.operator-btn {
+  background: linear-gradient(135deg, #84fab0 0%, #8fd3f4 100%);
+  color: white;
+}
+
+.operator-btn:hover {
+  background: linear-gradient(135deg, #8fd3f4 0%, #84fab0 100%);
+}
+
+/* Scientific Buttons */
+.scientific-btn {
+  background: linear-gradient(135deg, #a18cd1 0%, #fbc2eb 100%);
+  color: white;
+}
+
+.scientific-btn:hover {
+  background: linear-gradient(135deg, #fbc2eb 0%, #a18cd1 100%);
+}
+
+/* Function Buttons */
+.function-btn {
+  background: linear-gradient(135deg, #fccb90 0%, #d57eeb 100%);
+  color: white;
+}
+
+.function-btn:hover {
+  background: linear-gradient(135deg, #d57eeb 0%, #fccb90 100%);
+}
+
+/* Equal Button */
+.equal-btn {
+  background-color: #ff6b6b;
+  color: white;
+}
+
+.equal-btn:hover {
+  background-color: #ff4e50;
+}
+
+/* Span zero button across 2 columns */
+.zero {
+  grid-column: span 2;
+}
+
+/* Responsive design for smaller screens */
+@media screen and (max-width: 768px) {
+  #display {
+    font-size: 1.8rem;
+    padding: 15px;
+  }
+
+  button {
+    padding: 12px;
+    font-size: 1.3rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #display {
+    font-size: 1.5rem;
+    padding: 10px;
+  }
+
+  button {
+    padding: 8px;
+    font-size: 1rem;
+  }
+}
